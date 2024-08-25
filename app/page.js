@@ -38,8 +38,8 @@ export default function Home() {
 
 
   let headerWhiteBg = false;
-  const collapseBtn = document.getElementById("collapse-btn");
-  const collapseHeaderItems = document.getElementById("collapsed-header-items");
+  const collapseBtn =  (document ?? [])?.getElementById("collapse-btn");
+  const collapseHeaderItems =  (document ?? [])?.getElementById("collapsed-header-items");
 
   function onHeaderClickOutside(e) {
     if (!collapseHeaderItems.contains(e.target)) {
