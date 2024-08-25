@@ -82,7 +82,7 @@ export default function Home() {
     // }
   }
 
-  window.addEventListener("resize", responsive);
+  // window.addEventListener("resize", responsive);
 
   // Animations using GSAP
   gsap.registerPlugin(ScrollTrigger);
@@ -115,21 +115,21 @@ export default function Home() {
   });
 
   // FAQ accordion functionality
-  const faqAccordion = document.querySelectorAll(".faq-accordion");
+  // const faqAccordion = document.querySelectorAll(".faq-accordion");
 
-  faqAccordion.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      let content = this.nextElementSibling;
-      if (content.style.maxHeight === "200px") {
-        content.style.maxHeight = "0px";
-        content.style.padding = "0px 18px";
-      } else {
-        content.style.maxHeight = "200px";
-        content.style.padding = "20px 18px";
-      }
-    });
-  });
+  // faqAccordion.forEach(function (btn) {
+  //   btn.addEventListener("click", function () {
+  //     this.classList.toggle("active");
+  //     let content = this.nextElementSibling;
+  //     if (content.style.maxHeight === "200px") {
+  //       content.style.maxHeight = "0px";
+  //       content.style.padding = "0px 18px";
+  //     } else {
+  //       content.style.maxHeight = "200px";
+  //       content.style.padding = "20px 18px";
+  //     }
+  //   });
+  // });
 
   // Reveal section animations
   const sections = gsap.utils.toArray("section");
