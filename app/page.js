@@ -18,7 +18,7 @@ export default function Home() {
 
     // Ensure elements are defined before accessing them
     const collapseBtn = document.getElementById("collapse-btn");
-    const collapseHeaderItems = document.getElementById("collapsed-header-items");
+    const collapseHeaderItems = (document ?? [])?.getElementById("collapsed-header-items");
 
     function onHeaderClickOutside(e) {
       if (collapseHeaderItems && !collapseHeaderItems.contains(e.target)) {
