@@ -6,12 +6,9 @@ import Image from "next/image";
 
 export default function Home() {
   const RESPONSIVE_WIDTH = 1024;
-
-  // Use state to manage the collapsed state of the header
   const [isHeaderCollapsed, setIsHeaderCollapsed] = useState(true);
 
   useEffect(() => {
-    // Check window width and set initial isHeaderCollapsed state
     const checkScreenWidth = () => {
       setIsHeaderCollapsed(window.innerWidth < RESPONSIVE_WIDTH);
     };
@@ -19,11 +16,26 @@ export default function Home() {
     checkScreenWidth(); // Check on initial load
     window.addEventListener("resize", checkScreenWidth); // Check on resize
 
+    // Ensure elements are defined before accessing them
+    const collapseBtn = document.getElementById("collapse-btn");
+    const collapseHeaderItems = document.getElementById("collapsed-header-items");
+
+    function onHeaderClickOutside(e) {
+      if (collapseHeaderItems && !collapseHeaderItems.contains(e.target)) {
+        toggleHeader();
+      }
+    }
+
+    // Add event listeners that depend on the document object here
+    document.addEventListener("click", onHeaderClickOutside);
+
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", checkScreenWidth);
+      document.removeEventListener("click", onHeaderClickOutside);
     };
   }, []); // Empty dependency array ensures this effect runs only once after mount
+
 
   let headerWhiteBg = false;
   const collapseBtn = document.getElementById("collapse-btn");
