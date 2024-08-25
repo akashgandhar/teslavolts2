@@ -9,41 +9,43 @@ export default function Home() {
   const [isHeaderCollapsed, setIsHeaderCollapsed] = useState(true);
 
   useEffect(() => {
-    if(typeof window !== "undefined") {
-    const checkScreenWidth = () => {
-      setIsHeaderCollapsed(window.innerWidth < RESPONSIVE_WIDTH);
-    };
+    if (typeof window !== "undefined") {
+      const checkScreenWidth = () => {
+        setIsHeaderCollapsed(window.innerWidth < RESPONSIVE_WIDTH);
+      };
 
-    checkScreenWidth(); // Check on initial load
-    window.addEventListener("resize", checkScreenWidth); // Check on resize
+      checkScreenWidth(); // Check on initial load
+      window.addEventListener("resize", checkScreenWidth); // Check on resize
 
-    // Ensure elements are defined before accessing them
-    const collapseBtn = document.getElementById("collapse-btn");
-    const collapseHeaderItems = document.getElementById("collapsed-header-items");
+      // Ensure elements are defined before accessing them
+      const collapseBtn = document.getElementById("collapse-btn");
+      const collapseHeaderItems = document.getElementById(
+        "collapsed-header-items"
+      );
 
-    function onHeaderClickOutside(e) {
-      if (collapseHeaderItems && !collapseHeaderItems.contains(e.target)) {
-        toggleHeader();
+      function onHeaderClickOutside(e) {
+        if (collapseHeaderItems && !collapseHeaderItems.contains(e.target)) {
+          toggleHeader();
+        }
       }
+
+      // Add event listeners that depend on the document object here
+      document.addEventListener("click", onHeaderClickOutside);
+
+      // Clean up the event listener on component unmount
+      return () => {
+        if (typeof window !== "undefined") {
+          window.removeEventListener("resize", checkScreenWidth);
+          document.removeEventListener("click", onHeaderClickOutside);
+        }
+      };
     }
-
-    // Add event listeners that depend on the document object here
-    document.addEventListener("click", onHeaderClickOutside);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", checkScreenWidth);
-      document.removeEventListener("click", onHeaderClickOutside);
-    };
-  }
   }, []); // Empty dependency array ensures this effect runs only once after mount
-
 
   let headerWhiteBg = false;
 
   // const collapseBtn = document.getElementById("collapse-btn");
   // const collapseHeaderItems = document.getElementById("collapsed-header-items");
-  
 
   function onHeaderClickOutside(e) {
     // if (!collapseHeaderItems.contains(e.target)) {
@@ -58,7 +60,6 @@ export default function Home() {
     //   collapseBtn.classList.remove("bi-list");
     //   collapseBtn.classList.add("bi-x", "max-lg:fixed");
     //   setIsHeaderCollapsed(false); // Update state
-
     //   setTimeout(
     //     () => window.addEventListener("click", onHeaderClickOutside),
     //     1
@@ -354,7 +355,8 @@ export default function Home() {
                     src="/s1-1.jpg"
                     alt="rocket"
                     className="w-full mix-blend-multiply"
-                  />                </div>
+                  />{" "}
+                </div>
               </div>
               <div class="flex flex-col gap-4 p-2">
                 <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
@@ -373,14 +375,16 @@ export default function Home() {
                     src="/s1-1.jpg"
                     alt="rocket"
                     className="w-full mix-blend-multiply"
-                  />                </div>
+                  />{" "}
+                </div>
               </div>
               <div class="flex flex-col gap-4 p-2">
                 <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
                   TeslaVolts App
                 </h3>
                 <div class="">
-                  Simplify the charging needs with Intelligent EV Charging app that is Next-Level.
+                  Simplify the charging needs with Intelligent EV Charging app
+                  that is Next-Level.
                 </div>
               </div>
             </div>
@@ -402,7 +406,8 @@ export default function Home() {
                   Fleet Management
                 </h3>
                 <div class="">
-                  Track Real-Time Charging Activity and Provide Driver Assistance
+                  Track Real-Time Charging Activity and Provide Driver
+                  Assistance
                 </div>
               </div>
             </div>
@@ -421,7 +426,8 @@ export default function Home() {
                   Charging-as-a-Service
                 </h3>
                 <div class="">
-                  Request on-demand EV charging when a vehicle is low or out of range.
+                  Request on-demand EV charging when a vehicle is low or out of
+                  range.
                 </div>
               </div>
             </div>
@@ -458,9 +464,12 @@ export default function Home() {
               </div>
 
               <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">EV operators & service providers</h3>
+                <h3 class="text-2xl max-md:text-xl">
+                  EV operators & service providers
+                </h3>
                 <p class=" max-md:text-sm">
-                  EV charging solutions for charge point operators. Set-up up a successful EV business model with our smart EV solutions.
+                  EV charging solutions for charge point operators. Set-up up a
+                  successful EV business model with our smart EV solutions.
                 </p>
               </div>
             </div>
@@ -499,11 +508,14 @@ export default function Home() {
               </div>
 
               <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">Utilities and energy companies</h3>
+                <h3 class="text-2xl max-md:text-xl">
+                  Utilities and energy companies
+                </h3>
                 <p class=" max-md:text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                  quasi consequuntur, distinctio laboriosamUtility & energy company solutions for EV charging.
-                  The EV market gives utilities access to new, profitable business models.
+                  quasi consequuntur, distinctio laboriosamUtility & energy
+                  company solutions for EV charging. The EV market gives
+                  utilities access to new, profitable business models.
                 </p>
               </div>
             </div>
@@ -516,7 +528,8 @@ export default function Home() {
               <div class="flex flex-col gap-4">
                 <h3 class="text-2xl max-md:text-xl">Oil & Gas companies</h3>
                 <p class=" max-md:text-sm">
-                  Gas and oil industries can benefit from intelligent EV charging options. TeslaVolts is here to support you.
+                  Gas and oil industries can benefit from intelligent EV
+                  charging options. TeslaVolts is here to support you.
                 </p>
               </div>
             </div>
@@ -529,8 +542,9 @@ export default function Home() {
               <div class="flex flex-col gap-4">
                 <h3 class="text-2xl max-md:text-xl">Automotive Businesses</h3>
                 <p class="text-sm ">
-                  Automotive sector technologies for intelligent EV charging.
-                  We support automotive manufacturers as they successfully enter the emerging EV market.
+                  Automotive sector technologies for intelligent EV charging. We
+                  support automotive manufacturers as they successfully enter
+                  the emerging EV market.
                 </p>
               </div>
             </div>
@@ -1002,8 +1016,6 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-
-      
     </div>
   );
 }
