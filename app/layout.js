@@ -1,6 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./styles/index.css";
+import { DirectionAwareHoverDemo } from "./components/DirectionAwareHoverDemo";
+import Footer from "./components/Footer";
+import Video from "./components/Video";
+import GoogleGeminiEffectDemo from "./components/GoogleGeminiEffectDemo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <DirectionAwareHoverDemo />
+        <Video  />
+        <GoogleGeminiEffectDemo />
+        <Footer />
+      </body>
     </html>
   );
 }
