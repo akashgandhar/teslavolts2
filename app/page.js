@@ -17,7 +17,7 @@ export default function Home() {
     window.addEventListener("resize", checkScreenWidth); // Check on resize
 
     // Ensure elements are defined before accessing them
-    const collapseBtn = document.getElementById("collapse-btn");
+    const collapseBtn =  (document ?? [])?.getElementById("collapse-btn");
     const collapseHeaderItems = (document ?? [])?.getElementById("collapsed-header-items");
 
     function onHeaderClickOutside(e) {
@@ -27,12 +27,12 @@ export default function Home() {
     }
 
     // Add event listeners that depend on the document object here
-    document.addEventListener("click", onHeaderClickOutside);
+    (document ?? [])?.addEventListener("click", onHeaderClickOutside);
 
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", checkScreenWidth);
-      document.removeEventListener("click", onHeaderClickOutside);
+      (document ?? [])?.removeEventListener("click", onHeaderClickOutside);
     };
   }, []); // Empty dependency array ensures this effect runs only once after mount
 
@@ -110,7 +110,7 @@ export default function Home() {
   });
 
   // FAQ accordion functionality
-  const faqAccordion = document.querySelectorAll(".faq-accordion");
+  const faqAccordion =  (document ?? [])?.querySelectorAll(".faq-accordion");
 
   faqAccordion.forEach(function (btn) {
     btn.addEventListener("click", function () {
