@@ -41,44 +41,44 @@ export default function Home() {
 
   let headerWhiteBg = false;
 
-  const collapseBtn = document.getElementById("collapse-btn");
-  const collapseHeaderItems = document.getElementById("collapsed-header-items");
+  // const collapseBtn = document.getElementById("collapse-btn");
+  // const collapseHeaderItems = document.getElementById("collapsed-header-items");
   
 
   function onHeaderClickOutside(e) {
-    if (!collapseHeaderItems.contains(e.target)) {
-      toggleHeader();
-    }
+    // if (!collapseHeaderItems.contains(e.target)) {
+    //   toggleHeader();
+    // }
   }
 
   function toggleHeader() {
-    if (isHeaderCollapsed) {
-      collapseHeaderItems.classList.add("opacity-100");
-      collapseHeaderItems.style.width = "60vw";
-      collapseBtn.classList.remove("bi-list");
-      collapseBtn.classList.add("bi-x", "max-lg:fixed");
-      setIsHeaderCollapsed(false); // Update state
+    // if (isHeaderCollapsed) {
+    //   collapseHeaderItems.classList.add("opacity-100");
+    //   collapseHeaderItems.style.width = "60vw";
+    //   collapseBtn.classList.remove("bi-list");
+    //   collapseBtn.classList.add("bi-x", "max-lg:fixed");
+    //   setIsHeaderCollapsed(false); // Update state
 
-      setTimeout(
-        () => window.addEventListener("click", onHeaderClickOutside),
-        1
-      );
-    } else {
-      collapseHeaderItems.classList.remove("opacity-100");
-      collapseHeaderItems.style.width = "0vw";
-      collapseBtn.classList.remove("bi-x", "max-lg:fixed");
-      collapseBtn.classList.add("bi-list");
-      setIsHeaderCollapsed(true); // Update state
-      window.removeEventListener("click", onHeaderClickOutside);
-    }
+    //   setTimeout(
+    //     () => window.addEventListener("click", onHeaderClickOutside),
+    //     1
+    //   );
+    // } else {
+    //   collapseHeaderItems.classList.remove("opacity-100");
+    //   collapseHeaderItems.style.width = "0vw";
+    //   collapseBtn.classList.remove("bi-x", "max-lg:fixed");
+    //   collapseBtn.classList.add("bi-list");
+    //   setIsHeaderCollapsed(true); // Update state
+    //   window.removeEventListener("click", onHeaderClickOutside);
+    // }
   }
 
   function responsive() {
-    if (window.innerWidth > RESPONSIVE_WIDTH) {
-      collapseHeaderItems.style.width = "";
-    } else {
-      setIsHeaderCollapsed(true);
-    }
+    // if (window.innerWidth > RESPONSIVE_WIDTH) {
+    //   collapseHeaderItems.style.width = "";
+    // } else {
+    //   setIsHeaderCollapsed(true);
+    // }
   }
 
   window.addEventListener("resize", responsive);
