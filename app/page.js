@@ -6,6 +6,9 @@ import Image from "next/image";
 import { DirectionAwareHoverDemo } from "./components/DirectionAwareHoverDemo";
 import Video from "./components/Video";
 import GoogleGeminiEffectDemo from "./components/GoogleGeminiEffectDemo";
+import { Montserrat, Rubik } from "next/font/google";
+
+const montserrat = Rubik({ subsets: ["latin"], weight:['500'] });
 
 export default function Home() {
   const RESPONSIVE_WIDTH = 1024;
@@ -155,21 +158,24 @@ export default function Home() {
     });
   });
   return (
-    <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black pt-10">
-      
+    <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black ">
 
       <section
-        class="hero-section relative flex min-h-[100vh] w-full max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
+        class="hero-section relative  flex min-h-[100vh] w-full pt-10 max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
         id="hero-section"
+      
       >
+        <div className="bg-[url('/bg.jpg')] absolute w-full h-[150vh] bg-contain top-0">
+
+        </div>
         <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
-          <div class="flex flex-col place-content-center items-center">
-            <div class="reveal-up gradient-text text-center text-6xl font-semibold uppercase leading-[80px] max-lg:text-4xl max-md:leading-snug">
-              <span class=""> Empowering Seamless </span>
+          <div class="flex flex-col place-content-center items-center ">
+            <div class={`${montserrat.className} reveal-up gradient-text text-center text-6xl font-semibold uppercase leading-[80px] max-lg:text-4xl max-md:leading-snug`}>
+              <span class={montserrat.className}> Empowering Seamless </span>
               <br />
               <span class=""> Electric Mobility Solutions</span>
             </div>
-            <div class="reveal-up mt-10 max-w-[450px] p-2 text-center max-lg:max-w-full">
+            <div class="reveal-up mt-10 max-w-[450px] p-2 text-center max-lg:max-w-full text-white">
               Pioneering a sustainable shift to electric driving, we empower EV
               sector players to manage efficient charging networks, accelerating
               electric vehicle adoption. Enabling seamless EV mobility and

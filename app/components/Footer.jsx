@@ -154,7 +154,7 @@ export default function Footer() {
               <h4 class="text-lg text-gray-900 font-medium mb-7">
                 Download App
               </h4>
-              <ul class="text-sm  transition-all duration-500">
+              <ul class="text-sm flex gap-5 items-center justify-center transition-all duration-500">
                 <li class="mb-6">
                   <a
                     href="javascript:;"
@@ -163,12 +163,11 @@ export default function Footer() {
                     <img
                       alt="Play Store icon"
                       loading="lazy"
-                      width="168"
-                      height="50"
                       decoding="async"
                       data-nimg="1"
                       // style="color:transparent"
-                      src="/icons/playstore.svg"
+                      src="/google-play.png"
+                      className="w-14 h-14"
                     />
                   </a>
                 </li>
@@ -185,7 +184,9 @@ export default function Footer() {
                       decoding="async"
                       data-nimg="1"
                       // style="color:transparent"
-                      src="/icons/ios.svg"
+                      src="/game.png"
+                      className="w-14 h-14"
+
                     />
                   </a>
                 </li>

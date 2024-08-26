@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function NavbarMain() {
   return (
     <div className="relative flex items-center justify-center">
-      <Navbar className="top-2" />
+      <Navbar className="top-4" />
     </div>
   );
 }
