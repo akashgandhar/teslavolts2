@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { DirectionAwareHoverDemo } from "./components/DirectionAwareHoverDemo";
+import Video from "./components/Video";
+import GoogleGeminiEffectDemo from "./components/GoogleGeminiEffectDemo";
 
 export default function Home() {
   const RESPONSIVE_WIDTH = 1024;
@@ -44,45 +47,45 @@ export default function Home() {
 
   let headerWhiteBg = false;
 
-  // const collapseBtn = document.getElementById("collapse-btn");
-  // const collapseHeaderItems = document.getElementById("collapsed-header-items");
+  const collapseBtn = document.getElementById("collapse-btn");
+  const collapseHeaderItems = document.getElementById("collapsed-header-items");
 
   function onHeaderClickOutside(e) {
-    // if (!collapseHeaderItems.contains(e.target)) {
-    //   toggleHeader();
-    // }
+    if (!collapseHeaderItems.contains(e.target)) {
+      toggleHeader();
+    }
   }
 
   function toggleHeader() {
-    // if (isHeaderCollapsed) {
-    //   collapseHeaderItems.classList.add("opacity-100");
-    //   collapseHeaderItems.style.width = "60vw";
-    //   collapseBtn.classList.remove("bi-list");
-    //   collapseBtn.classList.add("bi-x", "max-lg:fixed");
-    //   setIsHeaderCollapsed(false); // Update state
-    //   setTimeout(
-    //     () => window.addEventListener("click", onHeaderClickOutside),
-    //     1
-    //   );
-    // } else {
-    //   collapseHeaderItems.classList.remove("opacity-100");
-    //   collapseHeaderItems.style.width = "0vw";
-    //   collapseBtn.classList.remove("bi-x", "max-lg:fixed");
-    //   collapseBtn.classList.add("bi-list");
-    //   setIsHeaderCollapsed(true); // Update state
-    //   window.removeEventListener("click", onHeaderClickOutside);
-    // }
+    if (isHeaderCollapsed) {
+      collapseHeaderItems.classList.add("opacity-100");
+      collapseHeaderItems.style.width = "60vw";
+      collapseBtn.classList.remove("bi-list");
+      collapseBtn.classList.add("bi-x", "max-lg:fixed");
+      setIsHeaderCollapsed(false); // Update state
+      setTimeout(
+        () => window.addEventListener("click", onHeaderClickOutside),
+        1
+      );
+    } else {
+      collapseHeaderItems.classList.remove("opacity-100");
+      collapseHeaderItems.style.width = "0vw";
+      collapseBtn.classList.remove("bi-x", "max-lg:fixed");
+      collapseBtn.classList.add("bi-list");
+      setIsHeaderCollapsed(true); // Update state
+      window.removeEventListener("click", onHeaderClickOutside);
+    }
   }
 
   function responsive() {
-    // if (window.innerWidth > RESPONSIVE_WIDTH) {
-    //   collapseHeaderItems.style.width = "";
-    // } else {
-    //   setIsHeaderCollapsed(true);
-    // }
+    if (window.innerWidth > RESPONSIVE_WIDTH) {
+      collapseHeaderItems.style.width = "";
+    } else {
+      setIsHeaderCollapsed(true);
+    }
   }
 
-  // window.addEventListener("resize", responsive);
+  window.addEventListener("resize", responsive);
 
   // Animations using GSAP
   gsap.registerPlugin(ScrollTrigger);
@@ -115,21 +118,21 @@ export default function Home() {
   });
 
   // FAQ accordion functionality
-  // const faqAccordion = document.querySelectorAll(".faq-accordion");
+  const faqAccordion = document.querySelectorAll(".faq-accordion");
 
-  // faqAccordion.forEach(function (btn) {
-  //   btn.addEventListener("click", function () {
-  //     this.classList.toggle("active");
-  //     let content = this.nextElementSibling;
-  //     if (content.style.maxHeight === "200px") {
-  //       content.style.maxHeight = "0px";
-  //       content.style.padding = "0px 18px";
-  //     } else {
-  //       content.style.maxHeight = "200px";
-  //       content.style.padding = "20px 18px";
-  //     }
-  //   });
-  // });
+  faqAccordion.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      let content = this.nextElementSibling;
+      if (content.style.maxHeight === "200px") {
+        content.style.maxHeight = "0px";
+        content.style.padding = "0px 18px";
+      } else {
+        content.style.maxHeight = "200px";
+        content.style.padding = "20px 18px";
+      }
+    });
+  });
 
   // Reveal section animations
   const sections = gsap.utils.toArray("section");
@@ -460,7 +463,13 @@ export default function Home() {
           <div class="mt-6 flex max-w-[100%] flex-wrap place-content-center gap-8 max-lg:flex-col">
             <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
               <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-globe"></i>
+                <i class="bi bi-globe">
+                  <img
+                    src="/logoSmall.png"
+                    alt=""
+                    className="w-14 h-8 object-cover aspect-square"
+                  />
+                </i>
               </div>
 
               <div class="flex flex-col gap-4">
@@ -474,37 +483,55 @@ export default function Home() {
               </div>
             </div>
 
-            <div class="reveal-up flex h-[200px] w-[450px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
+            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+              {/* <div class="text-4xl max-md:text-2xl">
                 <i class="bi bi-bar-chart-fill"></i>
-              </div>
+              </div> */}
 
+              <img
+                src="/evch.png"
+                alt=""
+                className="animateBounce aspect-square"
+              />
               <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">Insights</h3>
-                <p class=" max-md:text-sm">
+                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+
+                {/* <p class=" max-md:text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   quasi consequuntur, distinctio laboriosam
-                </p>
+                </p> */}
               </div>
             </div>
 
-            <div class="reveal-up flex h-[200px] w-[450px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-cloud-fill"></i>
-              </div>
+            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+              {/* <div class="text-4xl max-md:text-2xl">
+                <i class="bi bi-bar-chart-fill"></i>
+              </div> */}
 
+              <img
+                src="/uti.png"
+                alt=""
+                className="animateBounce aspect-square"
+              />
               <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">Cloud backup</h3>
-                <p class=" max-md:text-sm">
+                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+
+                {/* <p class=" max-md:text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   quasi consequuntur, distinctio laboriosam
-                </p>
+                </p> */}
               </div>
             </div>
 
             <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
               <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-fingerprint"></i>
+                <i class="bi bi-globe">
+                  <img
+                    src="/logoSmall.png"
+                    alt=""
+                    className="w-24 h-8 object-contain"
+                  />
+                </i>
               </div>
 
               <div class="flex flex-col gap-4">
@@ -522,7 +549,13 @@ export default function Home() {
 
             <div class="reveal-up flex h-[200px] w-[600px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
               <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-sliders"></i>
+                <i class="bi bi-globe">
+                  <img
+                    src="/logoSmall.png"
+                    alt=""
+                    className="w-24 h-8 object-contain"
+                  />
+                </i>
               </div>
 
               <div class="flex flex-col gap-4">
@@ -536,7 +569,13 @@ export default function Home() {
 
             <div class="reveal-up flex h-[200px] w-[600px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
               <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-gear-fill"></i>
+                <i class="bi bi-globe">
+                  <img
+                    src="/logoSmall.png"
+                    alt=""
+                    className="w-24 h-8 object-contain"
+                  />
+                </i>
               </div>
 
               <div class="flex flex-col gap-4">
@@ -629,6 +668,23 @@ export default function Home() {
                 class="h-full w-full object-contain animateBounce  "
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden">
+        <div class="mt-8 flex flex-col place-items-center gap-5">
+          <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
+            <h2 class="text-4xl font-medium  max-md:text-2xl">
+              Our Specialities
+            </h2>
+          </div>
+
+          <div className="reveal-up w-full">
+            <DirectionAwareHoverDemo />
+          </div>
+          <div className="reveal-up w-full">
+            <Video />
           </div>
         </div>
       </section>
