@@ -155,59 +155,8 @@ export default function Home() {
     });
   });
   return (
-    <div class="flex min-h-[100vh] flex-col bg-white text-black">
-      <header class="max-w-lg:px-4 max-w-lg:mr-auto absolute top-0 z-20 flex h-[60px] w-full bg-opacity-0 px-[5%] lg:justify-around">
-        <a class="h-[50px] w-[50px] p-[4px]" href="">
-          <img
-            src="https://res.cloudinary.com/dk2qptwnw/image/upload/v1723721661/Logo_j7ffqs.svg"
-            alt="logo"
-            class="object h-full w-full"
-          />
-        </a>
-        <div
-          class="collapsible-header animated-collapse max-lg:shadow-md"
-          id="collapsed-header-items"
-        >
-          <div class="flex h-full w-max gap-5 text-base max-lg:mt-[30px] max-lg:flex-col max-lg:place-items-end max-lg:gap-5 lg:mx-auto lg:place-items-center">
-            <a class="header-links" href="">
-              {" "}
-              About us{" "}
-            </a>
-            <a class="header-links" href="#pricing">
-              {" "}
-              Pricing{" "}
-            </a>
-            <a class="header-links" href="">
-              {" "}
-              Solutions{" "}
-            </a>
-            <a class="header-links" href="">
-              {" "}
-              Features{" "}
-            </a>
-            <a class="header-links" href="">
-              {" "}
-              Company{" "}
-            </a>
-          </div>
-          <div class="mx-4 flex place-items-center gap-[20px] text-base max-md:w-full max-md:flex-col max-md:place-content-center">
-            <a
-              href=""
-              aria-label="signup"
-              class="rounded-full bg-blue-500 px-3 py-2 text-white transition-transform duration-[0.3s] hover:translate-x-2"
-            >
-              <span>Get started</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <button
-          class="bi bi-list absolute right-3 top-3 z-50 text-3xl text-white lg:hidden"
-          onclick="toggleHeader()"
-          aria-label="menu"
-          id="collapse-btn"
-        ></button>
-      </header>
+    <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black pt-10">
+      
 
       <section
         class="hero-section relative flex min-h-[100vh] w-full max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
@@ -326,7 +275,9 @@ export default function Home() {
       <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="mt-8 flex flex-col place-items-center gap-5">
           <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
-            <h2 class="text-4xl font-medium max-md:text-3xl">Key benifits</h2>
+            <h2 class="text-4xl font-medium max-md:text-3xl">
+              Software Solutions
+            </h2>
           </div>
           <div class="mt-6 flex max-w-[100%] flex-wrap place-content-center gap-8 max-lg:flex-col">
             <div class="reveal-up flex h-[400px] w-[450px] flex-col gap-3 text-center max-md:w-[320px]">
@@ -539,10 +490,10 @@ export default function Home() {
                   Utilities and energy companies
                 </h3>
                 <p class=" max-md:text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                  quasi consequuntur, distinctio laboriosamUtility & energy
-                  company solutions for EV charging. The EV market gives
-                  utilities access to new, profitable business models.
+                  Utility & energy company solutions for EV charging. The EV
+                  market gives utilities access to new, profitable business
+                  models. Learn what our intelligent EV solutions can achieve
+                  for you.
                 </p>
               </div>
             </div>
@@ -587,6 +538,91 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
+            <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
+              <div class="text-4xl max-md:text-2xl">
+                <i class="bi bi-globe">
+                  <img
+                    src="/logoSmall.png"
+                    alt=""
+                    className="w-14 h-8 object-cover aspect-square"
+                  />
+                </i>
+              </div>
+
+              <div class="flex flex-col gap-4">
+                <h3 class="text-2xl max-md:text-xl">
+                  EV charging infrastructure
+                </h3>
+                <p class=" max-md:text-sm">
+                  Build a more intelligent EV charging infrastructure. With our
+                  cloud-based EV charging platform, we assist businesses all
+                  over the world in setting up their own EV charging
+                  infrastructure.
+                </p>
+              </div>
+            </div>
+
+            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+              {/* <div class="text-4xl max-md:text-2xl">
+                <i class="bi bi-bar-chart-fill"></i>
+              </div> */}
+
+              <img
+                src="/dd1.png"
+                alt=""
+                className="animateBounce aspect-square"
+              />
+              <div class="flex flex-col gap-4">
+                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+
+                {/* <p class=" max-md:text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  quasi consequuntur, distinctio laboriosam
+                </p> */}
+              </div>
+            </div>
+
+            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+              {/* <div class="text-4xl max-md:text-2xl">
+                <i class="bi bi-bar-chart-fill"></i>
+              </div> */}
+
+              <img
+                src="/dd2.png"
+                alt=""
+                className="animateBounce aspect-square"
+              />
+              <div class="flex flex-col gap-4">
+                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+
+                {/* <p class=" max-md:text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  quasi consequuntur, distinctio laboriosam
+                </p> */}
+              </div>
+            </div>
+
+            <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
+              <div class="text-4xl max-md:text-2xl">
+                <i class="bi bi-globe">
+                  <img
+                    src="/logoSmall.png"
+                    alt=""
+                    className="w-24 h-8 object-contain"
+                  />
+                </i>
+              </div>
+
+              <div class="flex flex-col gap-4">
+                <h3 class="text-2xl max-md:text-xl">EV Expert Advice</h3>
+                <p class=" max-md:text-sm">
+                  Embrace the EV revolution with a unique business plan. Want to
+                  enter the EV market but are unsure of where to begin? Give our
+                  EV charging specialists a call.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -613,18 +649,20 @@ export default function Home() {
                 AI powered
               </h4>
               <span class="text-lg  max-md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+                Our AI-powered platform simplifies charging network management
+                with advanced technology and user-friendly tools.
               </span>
             </div>
             <div class="mt-4 flex flex-col gap-3">
               <h4 class="text-xl font-medium">
                 <i class="bi bi-check-all !text-2xl"></i>
-                Locally run
+                One for All
               </h4>
               <span class="text-lg  max-md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+                Whether you are a charge point operator, electric mobility
+                service provider, energy/utility company, oil and gas firm, or a
+                vehicle manufacturer, our platform offers a smart and tailored
+                solution to align with your unique business model.
               </span>
             </div>
           </div>
@@ -641,21 +679,21 @@ export default function Home() {
             <div class="mt-4 flex flex-col gap-3">
               <h4 class="text-xl font-medium">
                 <i class="bi bi-check-all !text-2xl"></i>
-                Easy to use
+                Real-time Charge Point Tracking
               </h4>
               <span class="text-lg  max-md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+                Our app provides real-time updates on charge point availability
+                and status, helping you plan your journey efficiently.
               </span>
             </div>
             <div class="mt-4 flex flex-col gap-3">
               <h4 class="text-xl font-medium">
                 <i class="bi bi-check-all !text-2xl"></i>
-                All in one panel
+                Convenient Payments:
               </h4>
               <span class="text-lg  max-md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+                Pay for charging sessions directly through the app, eliminating
+                the need for cash or physical cards.
               </span>
             </div>
           </div>

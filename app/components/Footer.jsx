@@ -8,22 +8,24 @@ export default function Footer() {
         <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
             <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-              <a
-                href="https://pagedone.io/"
-                class="flex justify-center lg:justify-start"
-              >
+              <a href="#" class="flex justify-center lg:justify-start">
                 <img src="/logo.svg" alt="logo" class="-ml-10" />
               </a>
               <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
-                Trusted in more than 100 countries & 5 million customers. Have
-                any query ?
+                Get the latest EV news directly in your inbox, sign up for our
+                newsletter!
               </p>
-              <a
-                href="javascript:;"
-                class="py-2.5 px-5 h-9 block w-fit bg-blue-500 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-blue-600 lg:mx-0"
-              >
-                Reserve Demo
-              </a>
+              <div class="w-full sm:w-[70%]">
+                <form class="flex rounded-full bg-transparent px-4 py-2 focus-within:ring-2 outline outline-blue-500  focus-within:ring-blue-600 hover:ring-2 hover:ring-blue-600">
+                  <input class="w-full appearance-none bg-transparent focus:outline-none" placeholder="Email" />
+                  <button
+                    class="ml-2 text-white shrink-0 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 px-3 py-1 text-sm font-medium hover:from-blue-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/50"
+                    type="submit"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
             </div>
             <div class="lg:mx-auto text-left ">
               <h4 class="text-lg text-gray-900 font-medium mb-7">
