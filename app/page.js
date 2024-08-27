@@ -97,7 +97,7 @@ export default function Home() {
   });
 
   gsap.to("#dashboard", {
-    boxShadow: "0px 15px 25px -5px #7e22ceaa",
+    // boxShadow: "0px 15px 25px -5px #7e22ceaa",
     duration: 0.3,
     scrollTrigger: {
       trigger: "#hero-section",
@@ -206,7 +206,7 @@ export default function Home() {
               <img
                 src="/dashboard.png"
                 alt="dashboard"
-                class="h-full w-full object-cover opacity-90 max-lg:object-contain mix-blend-color-dodge"
+                class="h-full w-full object-cover opacity-90 max-lg:object-contain"
               />
             </div>
 
