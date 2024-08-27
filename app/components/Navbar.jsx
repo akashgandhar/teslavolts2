@@ -54,13 +54,13 @@ function Navbar({ className }) {
         </Link>
 
         <Menu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item="Home">
+          {/* <MenuItem setActive={setActive} active={active} item="Home">
             <div className="flex flex-col space-y-4 text-sm transform hover:scale-105 transition-transform duration-200">
               <HoveredLink className="hover:text-[#407CB0]" href="/">
                 Dashboard
               </HoveredLink>
             </div>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem setActive={setActive} active={active} item="Software">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/">Intelligent Charging</HoveredLink>

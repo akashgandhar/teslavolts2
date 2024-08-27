@@ -165,7 +165,7 @@ export default function Home() {
         id="hero-section"
       
       >
-        <div className="bg-[url('/bg.jpg')] absolute w-full h-[150vh] bg-contain top-0">
+        <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-0">
 
         </div>
         <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           <div
-            class="reveal-up relative mt-8 flex w-full place-content-center place-items-center"
+            class="reveal-up relative -mt-8 flex w-full place-content-center place-items-center"
             id="dashboard-container"
           >
             <div
@@ -208,13 +208,13 @@ export default function Home() {
               id="dashboard"
             >
               <img
-                src="/footerimg.png"
+                src="/dashboard.png"
                 alt="dashboard"
-                class="h-full w-full object-cover opacity-90 max-lg:object-contain"
+                class="h-full w-full object-cover opacity-90 max-lg:object-contain mix-blend-color-dodge"
               />
             </div>
 
-            <div class="hero-img-bg-grad absolute left-[20%] top-5 h-[200px] w-[200px]"></div>
+            {/* <div class="hero-img-bg-grad absolute left-[20%] top-5 h-[200px] w-[200px]"></div> */}
           </div>
         </div>
       </section>
