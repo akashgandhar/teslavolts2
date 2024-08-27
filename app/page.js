@@ -8,8 +8,6 @@ import Video from "./components/Video";
 import GoogleGeminiEffectDemo from "./components/GoogleGeminiEffectDemo";
 import { Montserrat, Rubik } from "next/font/google";
 
-const montserrat = Rubik({ subsets: ["latin"], weight:['500'] });
-
 export default function Home() {
   const RESPONSIVE_WIDTH = 1024;
   const [isHeaderCollapsed, setIsHeaderCollapsed] = useState(true);
@@ -159,23 +157,21 @@ export default function Home() {
   });
   return (
     <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black ">
-
       <section
         class="hero-section relative  flex min-h-[100vh] w-full pt-10 max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
         id="hero-section"
-      
       >
-        <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-0">
-
-        </div>
+        <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-0"></div>
         <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
           <div class="flex flex-col place-content-center items-center ">
-            <div class={`${montserrat.className} reveal-up gradient-text text-center text-6xl font-semibold uppercase leading-[80px] max-lg:text-4xl max-md:leading-snug`}>
-              <span class={montserrat.className}> Empowering Seamless </span>
+            <div
+              class={`custom-font reveal-up text-[#fff] text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
+            >
+              <span> Empowering Seamless </span>
               <br />
               <span class=""> Electric Mobility Solutions</span>
             </div>
-            <div class="reveal-up mt-10 max-w-[450px] p-2 text-center max-lg:max-w-full text-white">
+            <div class="reveal-up mt-10 max-w-[550px] p-2 text-center max-lg:max-w-full text-[#ddd]">
               Pioneering a sustainable shift to electric driving, we empower EV
               sector players to manage efficient charging networks, accelerating
               electric vehicle adoption. Enabling seamless EV mobility and
@@ -219,8 +215,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8">
-        <h2 class="reveal-up text-3xl max-md:text-xl">
+      <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8 pt-16">
+        <h2 class="reveal-up text-3xl max-md:text-xl font-bold">
           Fueling EV Growth with Crucial Expertise
         </h2>
 
@@ -278,10 +274,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
-        <div class="mt-8 flex flex-col place-items-center gap-5">
+      <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6 pt-0">
+        <div class=" flex flex-col place-items-center gap-5">
           <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
-            <h2 class="text-4xl font-medium max-md:text-3xl">
+            <h2 class="text-4xl font-bold max-md:text-3xl">
               Software Solutions
             </h2>
           </div>
@@ -413,7 +409,7 @@ export default function Home() {
       <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="mt-8 flex flex-col place-items-center gap-5">
           <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
-            <h2 class="text-4xl font-medium  max-md:text-2xl">
+            <h2 class="text-4xl font-bold  max-md:text-2xl">
               Our Solutions For Your Bussiness
             </h2>
           </div>
@@ -645,7 +641,7 @@ export default function Home() {
             </div>
           </div>
           <div class="mt-6 flex max-w-[450px] flex-col gap-4">
-            <h3 class="text-4xl font-medium max-md:text-2xl">
+            <h3 class="text-4xl font-bold max-md:text-2xl">
               EV Charging Network Infrastructure
             </h3>
 
@@ -678,7 +674,7 @@ export default function Home() {
       <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="reveal-up flex min-h-[60vh] place-content-center place-items-center gap-[10%] max-lg:flex-col max-lg:gap-10">
           <div class="mt-6 flex max-w-[450px] flex-col gap-4">
-            <h3 class="text-4xl font-medium max-md:text-2xl">
+            <h3 class="text-4xl font-bold max-md:text-2xl">
               Introducing our Mobile App
             </h3>
 
@@ -719,7 +715,7 @@ export default function Home() {
       <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden">
         <div class="mt-8 flex flex-col place-items-center gap-5">
           <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
-            <h2 class="text-4xl font-medium  max-md:text-2xl">
+            <h2 class="text-4xl font-bold  max-md:text-2xl">
               Our Specialities
             </h2>
           </div>
@@ -734,7 +730,7 @@ export default function Home() {
       </section>
 
       {/* <section class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%]">
-        <h3 class="text-4xl font-medium  max-md:text-2xl">
+        <h3 class="text-4xl font-bold  max-md:text-2xl">
           You're in good hands
         </h3>
         <div class="mt-8 gap-10 space-y-8 max-md:columns-1 lg:columns-2 xl:columns-3">
@@ -943,7 +939,7 @@ export default function Home() {
       </section>
 
       <section class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%] max-lg:p-3">
-        <h3 class="reveal-up text-center text-4xl font-medium max-md:text-2xl">
+        <h3 class="reveal-up text-center text-4xl font-bold max-md:text-2xl">
           Read our articles ✨
         </h3>
         <div class="reveal-up mt-10 flex flex-wrap place-content-center gap-10 max-lg:flex-col">
@@ -1023,7 +1019,7 @@ export default function Home() {
       </section>
 
       <section class="flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%]">
-        <h3 class="text-4xl font-medium  max-md:text-2xl">Faq</h3>
+        <h3 class="text-4xl font-bold  max-md:text-2xl">Faq</h3>
         <div class="mt-5 flex min-h-[300px] w-full max-w-[850px] flex-col gap-4">
           <div class="faq w-full rounded-md border-[1px] border-solid border-blue-700 bg-blue-500">
             <div class="faq-accordion flex w-full select-none text-xl max-md:text-lg">

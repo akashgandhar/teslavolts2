@@ -27,11 +27,11 @@ export const MenuItem = ({
   return (
     <div
       onMouseEnter={() => setActive(item)}
-      className="relative group cursor-pointer"
+      className="relative group cursor-pointer "
     >
       <motion.p
         transition={{ duration: 0.3 }}
-        className="text-black hover:opacity-[0.9]"
+        className="hover:text-blue-500 hover:opacity-[0.9]"
       >
         {item}
       </motion.p>
@@ -42,11 +42,11 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%_+_0rem)] left-1/2 transform -translate-x-1/2 pt-6">
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="bg-white border border-gray-300 shadow-2xl rounded-xl overflow-hidden"
+                className="bg-white border border-gray-300 shadow-2xl rounded-xl overflow-hidden "
               >
                 <motion.div
                   layout // layout ensures smooth animation
@@ -73,7 +73,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-3xl border border-transparent bg-white flex justify-center space-x-4 "
+      className="relative rounded-3xl border border-transparent bg-white flex justify-center space-x-10  "
     >
       {children}
     </nav>
@@ -101,12 +101,8 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black">
-          {title}
-        </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem]">
-          {description}
-        </p>
+        <h4 className="text-xl font-bold mb-1 text-black">{title}</h4>
+        <p className="text-neutral-700 text-sm max-w-[10rem]">{description}</p>
       </div>
     </Link>
   );

@@ -38,11 +38,11 @@ function Navbar({ className }) {
       className={cn(
         "fixed top-0 inset-x-0 mx-auto z-50 transition-transform duration-300 ease-in-out ",
         "max-w-[95%]",
-        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0",
+        scrollDirection === "down" ? "-translate-y-24" : "translate-y-0",
         className
       )}
     >
-      <div className="w-full h-full flex justify-between items-center relative rounded-3xl border border-transparent bg-white shadow-lg  space-x-4 px-8 py-3">
+      <div className="w-full h-full flex justify-between items-center relative rounded-3xl border border-transparent bg-white shadow-lg  space-x-4 px-8 py-1">
         <Link href="/">
           <Image
             className="w-40"
