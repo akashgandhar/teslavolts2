@@ -159,10 +159,17 @@ export default function Home() {
   return (
     <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black ">
       <section
-        class="hero-section relative  flex min-h-[100vh] w-full pt-10 max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
+        class="hero-section relative flex min-h-[100vh] w-full pt-10 max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
         id="hero-section"
       >
-        <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-0"></div>
+        <div className=" absolute w-full h-[100vh] bg-cover top-0">
+          {/* video  */}
+          <video autoPlay muted loop className="w-full h-full object-cover mix-blend-multiply">
+            <source src="/assets/hero2.mp4" type="video/mp4" />
+          </video>
+
+        </div>
+        <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-[100vh] mix-blend-plus-darker"></div>
         <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
           <div class="flex flex-col place-content-center items-center ">
             <div
@@ -317,9 +324,9 @@ export default function Home() {
               </div> */}
 
               <img
-                src="/vectors/evproviders.png"
+                src="/vectors/oil1.png"
                 alt=""
-                className="animateBounce aspect-square"
+                className="animateBounce object-contain"
               />
               <div class="flex flex-col gap-4">
                 {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}

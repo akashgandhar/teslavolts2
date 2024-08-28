@@ -46,7 +46,7 @@ function Navbar({ className }) {
         <Link href="/">
           <Image
             className="w-40"
-            src="/logo.svg"
+            src="/logo.png"
             alt="logo"
             width={1920}
             height={1500}
