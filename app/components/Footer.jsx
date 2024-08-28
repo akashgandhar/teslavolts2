@@ -9,7 +9,7 @@ export default function Footer() {
           <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
             <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
               <a href="#" class="flex justify-center lg:justify-start">
-                <img src="/logo.svg" alt="logo" class="-ml-10" />
+                <img src="/logo.png" alt="logo" class="-ml-10" />
               </a>
               <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
                 Get the latest EV news directly in your inbox, sign up for our
@@ -28,7 +28,7 @@ export default function Footer() {
               </div>
             </div>
             <div class="lg:mx-auto text-left ">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">
+              <h4 class="text-lg text-gray-900 font-bold mb-7">
                 EV Services
               </h4>
               <ul class="text-sm  transition-all duration-500">
@@ -91,7 +91,7 @@ export default function Footer() {
               </ul>
             </div>
             <div class="lg:mx-auto text-left ">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">Resources</h4>
+              <h4 class="text-lg text-gray-900 font-bold mb-7">Resources</h4>
               <ul class="text-sm  transition-all duration-500">
                 <li class="mb-6">
                   <a
@@ -128,7 +128,7 @@ export default function Footer() {
               </ul>
             </div>
             <div class="lg:mx-auto text-left">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">About Us</h4>
+              <h4 class="text-lg text-gray-900 font-bold mb-7">About Us</h4>
               <ul class="text-sm  transition-all duration-500">
                 <li class="mb-6">
                   <a
@@ -151,7 +151,7 @@ export default function Footer() {
               </ul>
             </div>
             <div class="lg:mx-auto text-left">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">
+              <h4 class="text-lg text-gray-900 font-bold mb-7">
                 Download App
               </h4>
               <ul class="text-sm flex gap-5 items-center justify-center transition-all duration-500">

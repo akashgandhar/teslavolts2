@@ -5,8 +5,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { DirectionAwareHoverDemo } from "./components/DirectionAwareHoverDemo";
 import Video from "./components/Video";
-import GoogleGeminiEffectDemo from "./components/GoogleGeminiEffectDemo";
+import StickyScrollReveal from "./components/stickyScroll";
 import { Montserrat, Rubik } from "next/font/google";
+
 
 export default function Home() {
   const RESPONSIVE_WIDTH = 1024;
@@ -274,137 +275,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6 pt-0">
-        <div class=" flex flex-col place-items-center gap-5">
-          <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
-            <h2 class="text-4xl font-bold max-md:text-3xl">
-              Software Solutions
-            </h2>
-          </div>
-          <div class="mt-6 flex max-w-[100%] flex-wrap place-content-center gap-8 max-lg:flex-col">
-            <div class="reveal-up flex h-[400px] w-[450px] flex-col gap-3 text-center max-md:w-[320px]">
-              <div class="border-gradient h-[400px] w-full overflow-hidden max-md:h-[350px]">
-                <div class="flex h-full w-full place-content-center place-items-end p-2">
-                  {/* <i class="bi bi-rocket-takeoff-fill text-7xl  max-md:text-5xl"></i> */}
-                  {/* image */}
-                  <img
-                    src="/s1-1.jpg"
-                    alt="rocket"
-                    className="w-full mix-blend-multiply"
-                  />
-                </div>
-              </div>
-              <div class="flex flex-col gap-4 p-2">
-                <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
-                  Intelligent Charging
-                </h3>
-                <div class="">
-                  Scale Your Charging Infrastructure and Grid Capacity with a
-                  Cloud-Based System
-                </div>
-              </div>
-            </div>
-            <div class="reveal-up flex h-[400px] w-[450px] flex-col gap-3 text-center max-md:w-[320px]">
-              <div class="border-gradient h-[400px] w-full overflow-hidden max-md:text-[350px]">
-                <div class="flex h-full w-full place-content-center place-items-end p-2">
-                  <img
-                    src="/s1-1.jpg"
-                    alt="rocket"
-                    className="w-full mix-blend-multiply"
-                  />{" "}
-                </div>
-              </div>
-              <div class="flex flex-col gap-4 p-2">
-                <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
-                  Remote Management
-                </h3>
-                <div class="">
-                  Retrieve Comprehensive Data on Charging Stations and
-                  Transactions
-                </div>
-              </div>
-            </div>
-            <div class="reveal-up flex h-[400px] w-[450px] flex-col gap-3 text-center max-md:w-[320px]">
-              <div class="border-gradient h-[400px] w-full overflow-hidden max-md:h-[350px]">
-                <div class="flex h-full w-full place-content-center place-items-end p-2">
-                  <img
-                    src="/s1-1.jpg"
-                    alt="rocket"
-                    className="w-full mix-blend-multiply"
-                  />{" "}
-                </div>
-              </div>
-              <div class="flex flex-col gap-4 p-2">
-                <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
-                  TeslaVolts App
-                </h3>
-                <div class="">
-                  Simplify the charging needs with Intelligent EV Charging app
-                  that is Next-Level.
-                </div>
-              </div>
-            </div>
 
-            <div class="reveal-up flex h-[400px] w-[450px] flex-col gap-3 text-center max-md:w-[320px]">
-              <div class="border-gradient h-[400px] w-full overflow-hidden max-md:h-[350px]">
-                <div class="flex h-full w-full place-content-center place-items-end p-2">
-                  {/* <i class="bi bi-rocket-takeoff-fill text-7xl  max-md:text-5xl"></i> */}
-                  {/* image */}
-                  <img
-                    src="/s1-1.jpg"
-                    alt="rocket"
-                    className="w-full mix-blend-multiply"
-                  />
-                </div>
-              </div>
-              <div class="flex flex-col gap-4 p-2">
-                <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
-                  Fleet Management
-                </h3>
-                <div class="">
-                  Track Real-Time Charging Activity and Provide Driver
-                  Assistance
-                </div>
-              </div>
-            </div>
-            <div class="reveal-up flex h-[400px] w-[450px] flex-col gap-3 text-center max-md:w-[320px]">
-              <div class="border-gradient h-[400px] w-full overflow-hidden max-md:text-[350px]">
-                <div class="flex h-full w-full place-content-center place-items-end p-2">
-                  <img
-                    src="/fleet.png"
-                    alt="rocket"
-                    className="w-full mix-blend-multiply"
-                  />
-                </div>
-              </div>
-              <div class="flex flex-col gap-4 p-2">
-                <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
-                  Charging-as-a-Service
-                </h3>
-                <div class="">
-                  Request on-demand EV charging when a vehicle is low or out of
-                  range.
-                </div>
-              </div>
-            </div>
-            <div class="reveal-up flex h-[400px] w-[450px] flex-col gap-3 text-center max-md:w-[320px]">
-              <div class="border-gradient h-[400px] w-full overflow-hidden max-md:h-[350px]">
-                <div class="flex h-full w-full place-content-center place-items-end p-2">
-                  <i class="bi bi-lightning-charge-fill text-7xl  max-md:text-5xl"></i>
-                </div>
-              </div>
-              <div class="flex flex-col gap-4 p-2">
-                <h3 class="mt-8 text-2xl font-normal max-md:text-xl">
-                  Billing Management
-                </h3>
-                <div class="">
-                  Simplify Charger Payments and Billing Operations Management
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+
+      
+          <StickyScrollReveal/>
 
       <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="mt-8 flex flex-col place-items-center gap-5">
@@ -442,7 +317,7 @@ export default function Home() {
               </div> */}
 
               <img
-                src="/evch.png"
+                src="/vectors/evproviders.png"
                 alt=""
                 className="animateBounce aspect-square"
               />
@@ -462,7 +337,7 @@ export default function Home() {
               </div> */}
 
               <img
-                src="/uti.png"
+                src="/vectors/evcompany.png"
                 alt=""
                 className="animateBounce aspect-square"
               />
@@ -547,7 +422,7 @@ export default function Home() {
                   <img
                     src="/logoSmall.png"
                     alt=""
-                    className="w-14 h-8 object-cover aspect-square"
+                    className="w-20 h-8 object-contain aspect-square"
                   />
                 </i>
               </div>
@@ -571,7 +446,7 @@ export default function Home() {
               </div> */}
 
               <img
-                src="/dd1.png"
+                src="/vectors/pin.png"
                 alt=""
                 className="animateBounce aspect-square"
               />
@@ -591,7 +466,7 @@ export default function Home() {
               </div> */}
 
               <img
-                src="/dd2.png"
+                src="/vectors/expert.png"
                 alt=""
                 className="animateBounce aspect-square"
               />
@@ -632,12 +507,14 @@ export default function Home() {
       <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="reveal-up flex min-h-[60vh] place-content-center place-items-center gap-[10%] max-lg:flex-col max-lg:gap-10">
           <div class="flex">
-            <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg shadow-lg shadow-[rgba(170,49,233,0.44021358543417366)]">
+            <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg animate-pulse ">
               <img
-                src="/chip1.jpg"
+                src="/chip.png"
                 alt="coding"
                 class="h-full w-full object-cover"
               />
+
+
             </div>
           </div>
           <div class="mt-6 flex max-w-[450px] flex-col gap-4">
