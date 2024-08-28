@@ -516,9 +516,9 @@ export default function Home() {
           <div class="flex">
             <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg animate-pulse ">
               <img
-                src="/chip.png"
+                src="/assets/chip.png"
                 alt="coding"
-                class="h-full w-full object-cover"
+                class="h-full w-full object-cover img"
               />
 
 
