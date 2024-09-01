@@ -32,7 +32,7 @@ export function DirectionAwareHoverDemo() {
                                 <p className="font-bold text-xl mb-4">{title}</p>
                                 <p className="font-normal text-sm">{description}</p>
                             </div>
-                            <button className="px-4 py-2 bg-emerald-500 text-white rounded-full hover:bg-emerald-600 transition duration-300 mt-4 w-fit">
+                            <button className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300 mt-4 w-fit">
                                 Learn More →
                             </button>
                         </div>

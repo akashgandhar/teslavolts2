@@ -146,3 +146,184 @@
   }
 }
 
+
+/* 
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+} */
+.parallax{
+  background: url('https://goodcar.com/images/evergreen/what-are-the-3-main-electric-vehicle-types-01.webp') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue; 
+  /* opacity:0.8 */
+}
+.parallax-1{
+  background: url('https://goodcar.com/images/evergreen/what-are-the-3-main-electric-vehicle-types-01.webp') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue;
+}
+.parallax-2{
+  background: url('https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue;
+}
+.parallax-inner{
+  /* padding-top: 5%;
+  padding-bottom: 5%; */
+}
+/* h3{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+h1{
+  font-size: 160px;
+  text-align: center;
+} */
+
+.parallax2{
+  background: url('https://goodcar.com/images/evergreen/what-are-the-3-main-electric-vehicle-types-01.webp') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue; 
+  /* opacity:0.8 */
+}
+.parallax2-1{
+  background: url('https://goodcar.com/images/evergreen/what-are-the-3-main-electric-vehicle-types-01.webp') repeat fixed 100%;
+  background-size: cover;
+  color: aliceblue;
+}
+
+.form-container {
+  background-color: rgba(60, 59, 59, 0.8);
+  border-radius: 0.75rem;
+  color: #fff;
+  width: 100%;
+  padding: 2rem;
+}
+
+
+
+/* <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+    } */
+
+    .card {
+      width: 500px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 400px;
+      background-image: url('https://cdn.pixabay.com/photo/2023/09/21/01/20/sugar-blader-8265868_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .card-content {
+      padding: 20px;
+      background: linear-gradient(45deg, #037ADE, #0ABCF9);
+      
+      
+
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ddd;
+      font-weight: 300;
+    }
+
+    .card-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      /* background-color: #ff9a9e; */
+      /* color: white; */
+      text-decoration: none;
+      /* border-radius: 25px; */
+      /* transition: all 0.3s ease; */
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* .card-button:hover {
+      background-color: #ff7b7b;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(255, 154, 158, 0.4);
+    } */
+
+
+    a.button {
+      margin: 20px;
+      font-size: 20px;
+  }
+  
+  .arrow {
+      color: #0c5449;
+      background-color: #f6f3ed;
+      margin: 1em 0;
+  
+      &::after {
+          display: inline-block;
+          padding-left: 8px;
+          content: "\0279E"; 
+          -webkit-transition: transform 0.3s ease-out;
+          -moz-transition: transform 0.3s ease-out;
+          -ms-transition: transform 0.3s ease-out;
+          -o-transition: transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+      }
+  
+      &:hover {
+          color: #0c5449;
+          background-color: #f6f3ed;
+  
+          &::after {
+              -webkit-transform: translateX(4px);
+              -moz-transform: translateX(4px);
+              -ms-transform: translateX(4px);
+              -o-transform: translateX(4px);
+              transform: translateX(4px);
+          }
+      }
+  }
+  
+
+
+  

@@ -7,7 +7,9 @@ import { DirectionAwareHoverDemo } from "./components/DirectionAwareHoverDemo";
 import Video from "./components/Video";
 import StickyScrollReveal from "./components/stickyScroll";
 import { Montserrat, Rubik } from "next/font/google";
-
+import { FeaturesSectionDemo } from "./components/Numbers";
+import Paralelex from "./components/paralelex";
+import GlassSection from "./components/GlassSection";
 
 export default function Home() {
   const RESPONSIVE_WIDTH = 1024;
@@ -164,13 +166,17 @@ export default function Home() {
       >
         <div className=" absolute w-full h-[100vh] bg-cover top-0">
           {/* video  */}
-          <video autoPlay muted loop className="w-full h-full object-cover mix-blend-multiply">
+          <video
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-cover mix-blend-multiply"
+          >
             <source src="/assets/hero2.mp4" type="video/mp4" />
           </video>
-
         </div>
-        <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-[100vh] mix-blend-plus-darker"></div>
-        <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
+        {/* <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-[100vh] mix-blend-plus-darker"></div> */}
+        <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 pb-0 p-[5%] max-xl:place-items-center max-lg:p-4">
           <div class="flex flex-col place-content-center items-center ">
             <div
               class={`custom-font reveal-up text-[#fff] text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
@@ -212,7 +218,7 @@ export default function Home() {
               id="dashboard"
             >
               <img
-                src="/dashboard.png"
+                src="/new/mockUp.png"
                 alt="dashboard"
                 class="h-full w-full object-cover opacity-90 max-lg:object-contain"
               />
@@ -228,290 +234,249 @@ export default function Home() {
           Fueling EV Growth with Crucial Expertise
         </h2>
 
-        <div class="reveal-up carousel-container">
-          <div class="carousel lg:w-place-content-center mt-6 flex w-full gap-5 max-md:gap-2">
-            <div class="carousel-img h-[30px] w-[150px]">
-              <img
-                src="/assets/images/brand-logos/google.svg"
-                alt="Google"
-                class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                srcset=""
-              />
-            </div>
-            <div class="carousel-img h-[30px] w-[150px]">
-              <img
-                src="/assets/images/brand-logos/microsoft.svg"
-                alt="Microsoft"
-                class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                srcset=""
-              />
-            </div>
-            <div class="carousel-img h-[30px] w-[150px]">
-              <img
-                src="/assets/images/brand-logos/adobe.svg"
-                alt="Adobe"
-                class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                srcset=""
-              />
-            </div>
-            <div class="carousel-img h-[30px] w-[150px]">
-              <img
-                src="/assets/images/brand-logos/airbnb.svg"
-                alt="Adobe"
-                class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                srcset=""
-              />
-            </div>
-            <div class="carousel-img h-[30px] w-[150px]">
-              <img
-                src="/assets/images/brand-logos/stripe.svg"
-                alt="Adobe"
-                class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                srcset=""
-              />
-            </div>
-            <div class="carousel-img h-[30px] w-[150px]">
-              <img
-                src="/assets/images/brand-logos/reddit.svg"
-                alt="Adobe"
-                class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                srcset=""
-              />
-            </div>
-          </div>
-        </div>
+        <div class="reveal-up carousel-container w-full"></div>
+        <FeaturesSectionDemo />
       </section>
 
+      <Paralelex />
 
-      
+      {/* <GlassSection/> */}
 
-      
-          <StickyScrollReveal/>
-
-      <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
+      <section class="relative flex  w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="mt-8 flex flex-col place-items-center gap-5">
           <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
             <h2 class="text-4xl font-bold  max-md:text-2xl">
               Our Solutions For Your Bussiness
             </h2>
           </div>
-          <div class="mt-6 flex max-w-[100%] flex-wrap place-content-center gap-8 max-lg:flex-col">
-            <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-globe">
-                  <img
-                    src="/logoSmall.png"
-                    alt=""
-                    className="w-14 h-8 object-cover aspect-square"
-                  />
-                </i>
+          <div class="mt-6 flex max-w-[100%] flex-col place-content-center gap-8 max-lg:flex-col lg:gap-16">
+            <div className="w-full flex items-center justify-center flex-row ">
+              <div class="reveal-up flex w-[750px] gap-8 rounded-xl border-[1px] outline-blue-500 outline outline-[1px] h-fit bg-secondary p-8 max-md:w-[320px]">
+                <div class="text-4xl max-md:text-2xl">
+                  <i class="bi bi-globe">
+                    <img
+                      src="/logoSmall.png"
+                      alt=""
+                      className="w-14 h-8 object-cover aspect-square"
+                    />
+                  </i>
+                </div>
+
+                <div class="flex flex-col gap-4 p-1">
+                  <h2 class="text-2xl max-md:text-xl">
+                    EV operators & service providers
+                  </h2>
+                  <p class=" max-md:text-sm">
+                    EV charging solutions for charge point operators. Set-up up
+                    a successful EV business model with our smart EV solutions.
+                  </p>
+                </div>
               </div>
 
-              <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">
-                  EV operators & service providers
-                </h3>
-                <p class=" max-md:text-sm">
-                  EV charging solutions for charge point operators. Set-up up a
-                  successful EV business model with our smart EV solutions.
-                </p>
-              </div>
-            </div>
-
-            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
-              {/* <div class="text-4xl max-md:text-2xl">
+              <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+                {/* <div class="text-4xl max-md:text-2xl">
                 <i class="bi bi-bar-chart-fill"></i>
               </div> */}
 
-              <img
-                src="/vectors/oil1.png"
-                alt=""
-                className="animateBounce object-contain"
-              />
-              <div class="flex flex-col gap-4">
-                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+                <img
+                  src="/new/v6.svg"
+                  alt=""
+                  className="animateBounce object-contain"
+                />
+                <div class="flex flex-col gap-4">
+                  {/* <h2 class="text-2xl max-md:text-xl">Insights</h2> */}
 
-                {/* <p class=" max-md:text-sm">
+                  {/* <p class=" max-md:text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   quasi consequuntur, distinctio laboriosam
                 </p> */}
+                </div>
               </div>
             </div>
 
-            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
-              {/* <div class="text-4xl max-md:text-2xl">
+            <div className="w-full flex items-center justify-center flex-row ">
+              <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+                {/* <div class="text-4xl max-md:text-2xl">
                 <i class="bi bi-bar-chart-fill"></i>
               </div> */}
 
-              <img
-                src="/vectors/evcompany.png"
-                alt=""
-                className="animateBounce aspect-square"
-              />
-              <div class="flex flex-col gap-4">
-                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+                <img
+                  src="/new/v2.svg"
+                  alt=""
+                  className="animateBounce aspect-square"
+                />
+                <div class="flex flex-col gap-4">
+                  {/* <h2 class="text-2xl max-md:text-xl">Insights</h2> */}
 
-                {/* <p class=" max-md:text-sm">
+                  {/* <p class=" max-md:text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   quasi consequuntur, distinctio laboriosam
                 </p> */}
+                </div>
+              </div>
+
+              <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] outline-blue-500 outline outline-[1px] bg-secondary p-8 max-md:w-[320px]">
+                <div class="text-4xl max-md:text-2xl">
+                  <i class="bi bi-globe">
+                    <img
+                      src="/logoSmall.png"
+                      alt=""
+                      className="w-24 h-8 object-contain"
+                    />
+                  </i>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                  <h2 class="text-2xl max-md:text-xl">
+                    Utilities and energy companies
+                  </h2>
+                  <p class=" max-md:text-sm">
+                    Utility & energy company solutions for EV charging. The EV
+                    market gives utilities access to new, profitable business
+                    models. Learn what our intelligent EV solutions can achieve
+                    for you.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-globe">
-                  <img
-                    src="/logoSmall.png"
-                    alt=""
-                    className="w-24 h-8 object-contain"
-                  />
-                </i>
+            <div className="w-full flex items-center justify-center flex-row gap-8 ">
+              <div class="reveal-up flex h-[200px] w-[600px] gap-8 rounded-xl border-[1px] outline-blue-500 outline outline-[1px] bg-secondary p-8 max-md:w-[320px]">
+                <div class="text-4xl max-md:text-2xl">
+                  <i class="bi bi-globe">
+                    <img
+                      src="/logoSmall.png"
+                      alt=""
+                      className="w-24 h-8 object-contain"
+                    />
+                  </i>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                  <h2 class="text-2xl max-md:text-xl">Oil & Gas companies</h2>
+                  <p class=" max-md:text-sm">
+                    Gas and oil industries can benefit from intelligent EV
+                    charging options. TeslaVolts is here to support you.
+                  </p>
+                </div>
               </div>
 
-              <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">
-                  Utilities and energy companies
-                </h3>
-                <p class=" max-md:text-sm">
-                  Utility & energy company solutions for EV charging. The EV
-                  market gives utilities access to new, profitable business
-                  models. Learn what our intelligent EV solutions can achieve
-                  for you.
-                </p>
-              </div>
-            </div>
+              <div class="reveal-up flex h-[200px] w-[600px] gap-8 rounded-xl border-[1px] outline-blue-500 outline outline-[1px] bg-secondary p-8 max-md:w-[320px]">
+                <div class="text-4xl max-md:text-2xl">
+                  <i class="bi bi-globe">
+                    <img
+                      src="/logoSmall.png"
+                      alt=""
+                      className="w-24 h-8 object-contain"
+                    />
+                  </i>
+                </div>
 
-            <div class="reveal-up flex h-[200px] w-[600px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-globe">
-                  <img
-                    src="/logoSmall.png"
-                    alt=""
-                    className="w-24 h-8 object-contain"
-                  />
-                </i>
-              </div>
-
-              <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">Oil & Gas companies</h3>
-                <p class=" max-md:text-sm">
-                  Gas and oil industries can benefit from intelligent EV
-                  charging options. TeslaVolts is here to support you.
-                </p>
-              </div>
-            </div>
-
-            <div class="reveal-up flex h-[200px] w-[600px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-globe">
-                  <img
-                    src="/logoSmall.png"
-                    alt=""
-                    className="w-24 h-8 object-contain"
-                  />
-                </i>
-              </div>
-
-              <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">Automotive Businesses</h3>
-                <p class="text-sm ">
-                  Automotive sector technologies for intelligent EV charging. We
-                  support automotive manufacturers as they successfully enter
-                  the emerging EV market.
-                </p>
+                <div class="flex flex-col gap-4">
+                  <h2 class="text-2xl max-md:text-xl">Automotive Businesses</h2>
+                  <p class="text-sm ">
+                    Automotive sector technologies for intelligent EV charging.
+                    We support automotive manufacturers as they successfully
+                    enter the emerging EV market.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-globe">
-                  <img
-                    src="/logoSmall.png"
-                    alt=""
-                    className="w-20 h-8 object-contain aspect-square"
-                  />
-                </i>
+            <div className="w-full flex items-center justify-center flex-row ">
+              <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] outline-blue-500 outline outline-[1px] bg-secondary p-8 max-md:w-[320px]">
+                <div class="text-4xl max-md:text-2xl">
+                  <i class="bi bi-globe">
+                    <img
+                      src="/logoSmall.png"
+                      alt=""
+                      className="w-20 h-8 object-contain aspect-square"
+                    />
+                  </i>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                  <h2 class="text-2xl max-md:text-xl">
+                    EV charging infrastructure
+                  </h2>
+                  <p class=" max-md:text-sm">
+                    Build a more intelligent EV charging infrastructure. With
+                    our cloud-based EV charging platform, we assist businesses
+                    all over the world in setting up their own EV charging
+                    infrastructure.
+                  </p>
+                </div>
               </div>
 
-              <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">
-                  EV charging infrastructure
-                </h3>
-                <p class=" max-md:text-sm">
-                  Build a more intelligent EV charging infrastructure. With our
-                  cloud-based EV charging platform, we assist businesses all
-                  over the world in setting up their own EV charging
-                  infrastructure.
-                </p>
-              </div>
-            </div>
-
-            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
-              {/* <div class="text-4xl max-md:text-2xl">
+              <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+                {/* <div class="text-4xl max-md:text-2xl">
                 <i class="bi bi-bar-chart-fill"></i>
               </div> */}
 
-              <img
-                src="/vectors/pin.png"
-                alt=""
-                className="animateBounce aspect-square"
-              />
-              <div class="flex flex-col gap-4">
-                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+                <img
+                  src="/new/v3.svg"
+                  alt=""
+                  className="animateBounce aspect-square"
+                />
+                <div class="flex flex-col gap-4">
+                  {/* <h2 class="text-2xl max-md:text-xl">Insights</h2> */}
 
-                {/* <p class=" max-md:text-sm">
+                  {/* <p class=" max-md:text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   quasi consequuntur, distinctio laboriosam
                 </p> */}
+                </div>
               </div>
             </div>
-
-            <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
-              {/* <div class="text-4xl max-md:text-2xl">
+            <div className="w-full flex items-center justify-center flex-row ">
+              <div class="reveal-up flex justify-center h-[200px] w-[450px] gap-8 rounded-xl bg-secondary max-md:w-[320px]">
+                {/* <div class="text-4xl max-md:text-2xl">
                 <i class="bi bi-bar-chart-fill"></i>
               </div> */}
 
-              <img
-                src="/vectors/expert.png"
-                alt=""
-                className="animateBounce aspect-square"
-              />
-              <div class="flex flex-col gap-4">
-                {/* <h3 class="text-2xl max-md:text-xl">Insights</h3> */}
+                <img
+                  src="/new/v.svg"
+                  alt=""
+                  className="animateBounce aspect-square"
+                />
+                <div class="flex flex-col gap-4">
+                  {/* <h2 class="text-2xl max-md:text-xl">Insights</h2> */}
 
-                {/* <p class=" max-md:text-sm">
+                  {/* <p class=" max-md:text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   quasi consequuntur, distinctio laboriosam
                 </p> */}
-              </div>
-            </div>
-
-            <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] border-outlineColor bg-secondary p-8 max-md:w-[320px]">
-              <div class="text-4xl max-md:text-2xl">
-                <i class="bi bi-globe">
-                  <img
-                    src="/logoSmall.png"
-                    alt=""
-                    className="w-24 h-8 object-contain"
-                  />
-                </i>
+                </div>
               </div>
 
-              <div class="flex flex-col gap-4">
-                <h3 class="text-2xl max-md:text-xl">EV Expert Advice</h3>
-                <p class=" max-md:text-sm">
-                  Embrace the EV revolution with a unique business plan. Want to
-                  enter the EV market but are unsure of where to begin? Give our
-                  EV charging specialists a call.
-                </p>
+              <div class="reveal-up flex h-[200px] w-[750px] gap-8 rounded-xl border-[1px] outline-blue-500 outline outline-[1px] bg-secondary p-8 max-md:w-[320px]">
+                <div class="text-4xl max-md:text-2xl">
+                  <i class="bi bi-globe">
+                    <img
+                      src="/logoSmall.png"
+                      alt=""
+                      className="w-24 h-8 object-contain"
+                    />
+                  </i>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                  <h2 class="text-2xl max-md:text-xl">EV Expert Advice</h2>
+                  <p class=" max-md:text-sm">
+                    Embrace the EV revolution with a unique business plan. Want
+                    to enter the EV market but are unsure of where to begin?
+                    Give our EV charging specialists a call.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
+      {/* <StickyScrollReveal/> */}
+
+      <section class="relative bg-cover flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="reveal-up flex min-h-[60vh] place-content-center place-items-center gap-[10%] max-lg:flex-col max-lg:gap-10">
           <div class="flex">
             <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg animate-pulse ">
@@ -520,18 +485,16 @@ export default function Home() {
                 alt="coding"
                 class="h-full w-full object-cover img"
               />
-
-
             </div>
           </div>
-          <div class="mt-6 flex max-w-[450px] flex-col gap-4">
-            <h3 class="text-4xl font-bold max-md:text-2xl">
+          <div class="mt-6 flex max-w-[500px] flex-col gap-4">
+            <h2 class="text-4xl font-bold max-md:text-2xl">
               EV Charging Network Infrastructure
-            </h3>
+            </h2>
 
             <div class="mt-4 flex flex-col gap-3">
-              <h4 class="text-xl font-medium">
-                <i class="bi bi-check-all !text-2xl"></i>
+              <h4 class="text-xl font-medium text-blue-500">
+                <i class="bi bi-check-all !text-2xl "></i>
                 AI powered
               </h4>
               <span class="text-lg  max-md:text-base">
@@ -540,8 +503,8 @@ export default function Home() {
               </span>
             </div>
             <div class="mt-4 flex flex-col gap-3">
-              <h4 class="text-xl font-medium">
-                <i class="bi bi-check-all !text-2xl"></i>
+              <h4 class="text-xl font-medium text-blue-500">
+                <i class="bi bi-check-all !text-2xl "></i>
                 One for All
               </h4>
               <span class="text-lg  max-md:text-base">
@@ -558,12 +521,12 @@ export default function Home() {
       <section class="relative flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="reveal-up flex min-h-[60vh] place-content-center place-items-center gap-[10%] max-lg:flex-col max-lg:gap-10">
           <div class="mt-6 flex max-w-[450px] flex-col gap-4">
-            <h3 class="text-4xl font-bold max-md:text-2xl">
+            <h2 class="text-4xl font-bold max-md:text-2xl">
               Introducing our Mobile App
-            </h3>
+            </h2>
 
             <div class="mt-4 flex flex-col gap-3">
-              <h4 class="text-xl font-medium">
+              <h4 class="text-xl font-medium text-blue-500">
                 <i class="bi bi-check-all !text-2xl"></i>
                 Real-time Charge Point Tracking
               </h4>
@@ -573,8 +536,8 @@ export default function Home() {
               </span>
             </div>
             <div class="mt-4 flex flex-col gap-3">
-              <h4 class="text-xl font-medium">
-                <i class="bi bi-check-all !text-2xl"></i>
+              <h4 class="text-xl font-medium text-blue-500">
+                <i class="bi bi-check-all !text-2xl "></i>
                 Convenient Payments:
               </h4>
               <span class="text-lg  max-md:text-base">
@@ -614,9 +577,9 @@ export default function Home() {
       </section>
 
       {/* <section class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%]">
-        <h3 class="text-4xl font-bold  max-md:text-2xl">
+        <h2 class="text-4xl font-bold  max-md:text-2xl">
           You're in good hands
-        </h3>
+        </h2>
         <div class="mt-8 gap-10 space-y-8 max-md:columns-1 lg:columns-2 xl:columns-3">
           <div class="reveal-up flex h-fit w-[350px] break-inside-avoid flex-col gap-4 rounded-lg border-[1px] border-outlineColor bg-secondary p-4 max-lg:w-[320px]">
             <p class="mt-4 ">
@@ -748,13 +711,13 @@ export default function Home() {
         class="mt-5 flex w-full flex-col place-items-center p-[2%]"
         id="pricing"
       >
-        <h3 class="text-3xl font-medium  max-md:text-2xl">Simple pricing</h3>
+        <h2 class="text-3xl font-medium  max-md:text-2xl">Simple pricing</h2>
         <div class="mt-10 flex flex-wrap place-content-center gap-8 max-lg:flex-col">
           <div class="reveal-up flex w-[380px] flex-col place-items-center gap-2 rounded-lg border-[1px] border-outlineColor bg-secondary p-8 shadow-xl max-lg:w-[320px]">
-            <h3 class="">
+            <h2 class="">
               <span class="text-5xl font-semibold">$9</span>
               <span class="text-2xl ">/mo</span>
-            </h3>
+            </h2>
             <p class="mt-3 text-center ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
               explicabo!
@@ -774,10 +737,10 @@ export default function Home() {
             </a>
           </div>
           <div class="reveal-up flex w-[380px] flex-col place-items-center gap-2 rounded-lg border-2 border-primary bg-secondary p-8 shadow-xl max-lg:w-[320px]">
-            <h3 class="">
+            <h2 class="">
               <span class="text-5xl font-semibold">$19</span>
               <span class="text-2xl ">/mo</span>
-            </h3>
+            </h2>
             <p class="mt-3 text-center ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
               explicabo!
@@ -797,10 +760,10 @@ export default function Home() {
             </a>
           </div>
           <div class="reveal-up flex w-[380px] flex-col place-items-center gap-2 rounded-lg border-[1px] border-outlineColor bg-secondary p-8 shadow-xl max-lg:w-[320px]">
-            <h3 class="">
+            <h2 class="">
               <span class="text-5xl font-semibold">$49</span>
               <span class="text-2xl ">/mo</span>
-            </h3>
+            </h2>
             <p class="mt-3 text-center ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
               explicabo!
@@ -823,9 +786,9 @@ export default function Home() {
       </section>
 
       <section class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%] max-lg:p-3">
-        <h3 class="reveal-up text-center text-4xl font-bold max-md:text-2xl">
+        <h2 class="reveal-up text-center text-4xl font-bold max-md:text-2xl">
           Read our articles ✨
-        </h3>
+        </h2>
         <div class="reveal-up mt-10 flex flex-wrap place-content-center gap-10 max-lg:flex-col">
           <a
             href=""
@@ -839,9 +802,9 @@ export default function Home() {
                 srcset=""
               />
             </div>
-            <h3 class="mt-2 text-2xl font-semibold max-md:text-xl">
+            <h2 class="mt-2 text-2xl font-semibold max-md:text-xl">
               Article 1
-            </h3>
+            </h2>
             <p class="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
               explicabo!
@@ -863,9 +826,9 @@ export default function Home() {
                 srcset=""
               />
             </div>
-            <h3 class="mt-2 text-2xl font-semibold max-md:text-xl">
+            <h2 class="mt-2 text-2xl font-semibold max-md:text-xl">
               Article 2
-            </h3>
+            </h2>
             <p class="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
               explicabo!
@@ -887,9 +850,9 @@ export default function Home() {
                 srcset=""
               />
             </div>
-            <h3 class="mt-2 text-2xl font-semibold max-md:text-xl">
+            <h2 class="mt-2 text-2xl font-semibold max-md:text-xl">
               Article 3
-            </h3>
+            </h2>
             <p class="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
               explicabo!
@@ -903,7 +866,7 @@ export default function Home() {
       </section>
 
       <section class="flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%]">
-        <h3 class="text-4xl font-bold  max-md:text-2xl">Faq</h3>
+        <h2 class="text-4xl font-bold  max-md:text-2xl">Faq</h2>
         <div class="mt-5 flex min-h-[300px] w-full max-w-[850px] flex-col gap-4">
           <div class="faq w-full rounded-md border-[1px] border-solid border-blue-700 bg-blue-500">
             <div class="faq-accordion flex w-full select-none text-xl max-md:text-lg">

@@ -26,7 +26,7 @@ export const GoogleGeminiEffect = ({
       </p>
       <div className="flex w-full items-center justify-center py-4">
 
-        <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
+        <button className="font-bold bg-blue-500 hover:bg-blue-600 text-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-xs  w-fit mx-auto ">
           Reserve Demo
         </button>
       </div>
