@@ -222,7 +222,7 @@ export default function Home() {
                 class="h-full w-[70%] object-cover max-lg:object-contain"
               />
               <div
-                class={`custom-font reveal-up pt-20 text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
+                class={`custom-font text-gray-800 reveal-up pt-20 text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
               >
                 <span> The global software platform </span>
                 <br />
@@ -490,7 +490,7 @@ export default function Home() {
                 loading="lazy"
                 src="https://firebasestorage.googleapis.com/v0/b/teslavolts-1fde8.appspot.com/o/chip(1).png?alt=media&token=1b52b7ee-96e2-4554-83fe-535b39068f7d"
                 alt="coding"
-                class="h-full w-full object-cover hover:animate-ping"
+                class="h-full w-full object-cover hover:animate-pulse"
               />
             </div>
           </div>
