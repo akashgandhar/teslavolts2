@@ -229,7 +229,7 @@ export default function Home() {
               id="dashboard"
             >
               <img
-                src="/dashboard.png"
+                src="/new/dash.png"
                 alt="dashboard"
                 class="h-full w-[70%] object-cover opacity-90 max-lg:object-contain"
               />
