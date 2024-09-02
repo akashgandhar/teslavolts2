@@ -160,8 +160,9 @@ export default function Home() {
   });
   return (
     <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black ">
-      <section
-        class="hero-section relative flex min-h-[100vh] w-full pt-10 max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
+
+ <section
+        class="hero-section relative  flex min-h-[100vh] w-full pt-10 max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
         id="hero-section"
       >
         <div className=" absolute w-full h-[100vh] bg-cover top-0">
@@ -175,8 +176,18 @@ export default function Home() {
             <source src="/new/hero.mp4" type="video/mp4" />
           </video>
         </div>
-        {/* <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-[100vh] mix-blend-plus-darker"></div> */}
-        <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 pb-0 p-[5%] max-xl:place-items-center max-lg:p-4">
+        <div className=" absolute w-full top-[100vh] h-[100vh] bg-cover bg-[rgb(0,0,0,0.8)]">
+          {/* video  */}
+          <video
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-cover mix-blend-multiply"
+          >
+            <source src="/assets/hero2.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
           <div class="flex flex-col place-content-center items-center ">
             <div
               class={`custom-font reveal-up text-[#fff] text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
@@ -210,26 +221,36 @@ export default function Home() {
           </div>
 
           <div
-            class="reveal-up relative -mt-8 flex w-full place-content-center place-items-center"
+            class="reveal-up relative  flex w-full place-content-center place-items-center"
             id="dashboard-container"
           >
             <div
-              class="relative max-w-[80%] overflow-hidden rounded-xl bg-transparent max-md:max-w-full"
+              class="relative max-w-[80%] flex items-center justify-center flex-col overflow-hidden rounded-xl bg-transparent max-md:max-w-full"
               id="dashboard"
             >
               <img
-                src="/new/mockUp.png"
+                src="/dashboard.png"
                 alt="dashboard"
-                class="h-full w-[900px] object-cover opacity-90 max-lg:object-contain"
+                class="h-full w-[70%] object-cover opacity-90 max-lg:object-contain"
               />
+              <div
+              class={`custom-font reveal-up text-[#fff] pt-20 text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
+            >
+              <span> Introducing Our</span>
+              <br />
+              <span class=""> Dashboard CRM</span>
             </div>
+            </div>
+            
 
             {/* <div class="hero-img-bg-grad absolute left-[20%] top-5 h-[200px] w-[200px]"></div> */}
           </div>
         </div>
       </section>
 
-      <section class="relative flex w-full -mt-32 max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8 pt-16">
+    
+
+      <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8 pt-16">
         <h2 class="reveal-up text-3xl max-md:text-xl font-bold">
           Fueling EV Growth with Crucial Expertise
         </h2>
