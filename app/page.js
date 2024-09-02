@@ -160,8 +160,7 @@ export default function Home() {
   });
   return (
     <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black ">
-
- <section
+      <section
         class="hero-section relative  flex min-h-[100vh] w-full pt-10 max-w-[100vw] flex-col overflow-hidden max-md:mt-[50px]"
         id="hero-section"
       >
@@ -176,17 +175,7 @@ export default function Home() {
             <source src="/new/hero.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className=" absolute w-full top-[100vh] h-[100vh] bg-cover bg-[rgb(0,0,0,0.8)]">
-          {/* video  */}
-          <video
-            autoPlay
-            muted
-            loop
-            className="w-full h-full object-cover mix-blend-multiply"
-          >
-            <source src="/assets/hero2.mp4" type="video/mp4" />
-          </video>
-        </div>
+
         <div class="flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
           <div class="flex flex-col place-content-center items-center ">
             <div
@@ -196,11 +185,10 @@ export default function Home() {
               <br />
               <span class=""> Electric Mobility Solutions</span>
             </div>
-            <div class="reveal-up mt-10 max-w-[550px] p-2 text-center max-lg:max-w-full text-[#ddd]">
-              Pioneering a sustainable shift to electric driving, we empower EV
-              sector players to manage efficient charging networks, accelerating
-              electric vehicle adoption. Enabling seamless EV mobility and
-              empowering businesses towards electric ease.
+            <div class="reveal-up mt-10 max-w-[600px] p-2 text-center text-xl max-lg:max-w-full text-[#ddd]">
+              Harness TeslaVolts' powerful platform to effortlessly scale across
+              markets, address any use case, and develop your unique offerings,
+              all while maintaining full control over your business operations.
             </div>
 
             <div class="reveal-up mt-10 flex place-items-center gap-4">
@@ -231,24 +219,21 @@ export default function Home() {
               <img
                 src="/new/dash.png"
                 alt="dashboard"
-                class="h-full w-[70%] object-cover opacity-90 max-lg:object-contain"
+                class="h-full w-[70%] object-cover max-lg:object-contain"
               />
               <div
-              class={`custom-font reveal-up text-[#fff] pt-20 text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
-            >
-              <span> Introducing Our</span>
-              <br />
-              <span class=""> Dashboard CRM</span>
+                class={`custom-font reveal-up pt-20 text-center text-6xl font-semibold leading-[80px] max-lg:text-4xl max-md:leading-snug`}
+              >
+                <span> Introducing Our</span>
+                <br />
+                <span class=""> Dashboard CRM</span>
+              </div>
             </div>
-            </div>
-            
 
             {/* <div class="hero-img-bg-grad absolute left-[20%] top-5 h-[200px] w-[200px]"></div> */}
           </div>
         </div>
       </section>
-
-    
 
       <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8 pt-16">
         <h2 class="reveal-up text-3xl max-md:text-xl font-bold">
@@ -500,11 +485,12 @@ export default function Home() {
       <section class="relative bg-cover flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="reveal-up flex min-h-[60vh] place-content-center place-items-center gap-[10%] max-lg:flex-col max-lg:gap-10">
           <div class="flex">
-            <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg ">
-              <img loading="lazy"
-                src="/new/chip.png"
+            <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg   transition-all duration-150 ease-in">
+              <img
+                loading="lazy"
+                src="https://firebasestorage.googleapis.com/v0/b/teslavolts-1fde8.appspot.com/o/chip(1).png?alt=media&token=1b52b7ee-96e2-4554-83fe-535b39068f7d"
                 alt="coding"
-                class="h-full w-full object-cover"
+                class="h-full w-full object-cover hover:scale-125"
               />
             </div>
           </div>
