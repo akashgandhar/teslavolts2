@@ -490,7 +490,7 @@ export default function Home() {
                 loading="lazy"
                 src="https://firebasestorage.googleapis.com/v0/b/teslavolts-1fde8.appspot.com/o/chip(1).png?alt=media&token=1b52b7ee-96e2-4554-83fe-535b39068f7d"
                 alt="coding"
-                class="h-full w-full object-cover hover:animate-pulse"
+                class="h-full w-full object-cover hover:animate-ping"
               />
             </div>
           </div>
