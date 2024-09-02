@@ -172,7 +172,7 @@ export default function Home() {
             loop
             className="w-full h-full object-cover mix-blend-multiply"
           >
-            <source src="/assets/hero2.mp4" type="video/mp4" />
+            <source src="/new/hero.mp4" type="video/mp4" />
           </video>
         </div>
         {/* <div className="bg-[url('/bg.jpg')] absolute w-full h-full bg-contain top-[100vh] mix-blend-plus-darker"></div> */}
@@ -220,7 +220,7 @@ export default function Home() {
               <img
                 src="/new/mockUp.png"
                 alt="dashboard"
-                class="h-full w-full object-cover opacity-90 max-lg:object-contain"
+                class="h-full w-[900px] object-cover opacity-90 max-lg:object-contain"
               />
             </div>
 
@@ -229,7 +229,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8 pt-16">
+      <section class="relative flex w-full -mt-32 max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8 pt-16">
         <h2 class="reveal-up text-3xl max-md:text-xl font-bold">
           Fueling EV Growth with Crucial Expertise
         </h2>
@@ -479,11 +479,11 @@ export default function Home() {
       <section class="relative bg-cover flex min-h-[80vh] w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6">
         <div class="reveal-up flex min-h-[60vh] place-content-center place-items-center gap-[10%] max-lg:flex-col max-lg:gap-10">
           <div class="flex">
-            <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg animate-pulse ">
-              <img
-                src="/assets/chip.png"
+            <div class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg ">
+              <img loading="lazy"
+                src="/new/chip.png"
                 alt="coding"
-                class="h-full w-full object-cover img"
+                class="h-full w-full object-cover"
               />
             </div>
           </div>
