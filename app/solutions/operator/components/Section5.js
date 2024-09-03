@@ -21,7 +21,7 @@ export default function Section5() {
                 variants={slideIn("left", "spring", 0.2, 2)}
                 initial="hidden"
                 animate={isInView ? "show" : "hidden"}
-                src="/solutions/bulb.png"
+                src="/new/s13.jpg"
                 className="mix-blend-multiply"
               />
             </div>

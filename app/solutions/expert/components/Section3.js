@@ -1,23 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { slideIn, textVariant } from "../../../../utils/motion";
 
 export default function Section3() {
+  const divRef = useRef(null);
+
+  const isInView = useInView(divRef, {
+    triggerOnce: true,
+  });
+
   return (
     <section class="px-2 py-32 bg-gradient-to-r from-blue-100/50 via-cyan-200-50 to-blue-100/50 md:px-8">
       <div class="container items-center px-8 mx-auto xl:px-5">
         <div class="flex flex-wrap items-center sm:-mx-3">
           <div class="w-full md:w-1/2 md:px-3">
-            <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
+            <motion.div
+              variants={textVariant(0.2)}
+              initial="hidden"
+              animate={isInView ? "show" : "hidden"}
+              class="w-full pb-6 space-y-6 sm:max-w-lg lg:max-w-xl md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0"
+            >
               <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
                 <span class="block xl:inline">Opportunity: </span>
                 <span class="block text-blue-500 xl:inline">
-                EV Charging recommendations for your business model
+                  EV Charging recommendations for your business model.
                 </span>
               </h1>
-              <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-              TeslaVolts has more than 6 years of experience in the electric vehicle industry and has previously worked with CPO in India.
-We have acquired the knowledge and experience essential to provide consumers with sound advice because we have been involved in the EV sector since the beginning.
-
-Whether you are an Original Equipment Manufacturer (OEM), Charge Point Operator (CPO), Electric Mobility Provider (eMSP), Utility, or Oil & Gas organisation, our team of EV charging professionals would be happy to help you develop your own EV charging business model.
+              <p
+                ref={divRef}
+                class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl"
+              >
+                TeslaVolts has more than 6 years of experience in the electric
+                vehicle industry and has previously worked with CPO in India. We
+                have acquired the knowledge and experience essential to provide
+                consumers with sound advice because we have been involved in the
+                EV sector since the beginning. Whether you are an Original
+                Equipment Manufacturer (OEM), Charge Point Operator (CPO),
+                Electric Mobility Provider (eMSP), Utility, or Oil & Gas
+                organisation, our team of EV charging professionals would be
+                happy to help you develop your own EV charging business model.
               </p>
               <div class="relative flex flex-col sm:flex-row sm:space-x-4">
                 <a
@@ -46,11 +67,17 @@ Whether you are an Original Equipment Manufacturer (OEM), Charge Point Operator 
                   Learn More
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div class="w-full md:w-1/2">
-            <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-              <img src="/images/fleet.webp" />
+            <div class="w-full h-auto overflow-hidden rounded-md  sm:rounded-xl">
+              <motion.img
+                variants={slideIn("right", "spring", 0.2, 2)}
+                initial="hidden"
+                animate={isInView ? "show" : "hidden"}
+                src="/solutions/cart.png"
+                className="mix-blend-multiply"
+              />
             </div>
           </div>
         </div>

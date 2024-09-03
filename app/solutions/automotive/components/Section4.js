@@ -1,17 +1,36 @@
-import React from "react";
+
+
+
+import { useInView, motion } from "framer-motion";
+import React, { useRef } from "react";
+import { slideIn } from "../../../../utils/motion";
 
 export default function Section4() {
+  const divRef = useRef(null);
+
+  const isInView = useInView(divRef, {
+    triggerOnce: true,
+  });
+
   return (
-    <div class="flex min-h-[70vh] py-10 justify-center items-center ">
-      <div class="text-center max-w-6xl mx-10">
+    <div
+      ref={divRef}
+      class="flex  min-h-[70vh] py-10 justify-center items-center overflow-hidden"
+    >
+      <motion.div
+        variants={slideIn("down", "spring", 0.2, 2)}
+        initial="hidden"
+        animate={isInView ? "show" : "hidden"}
+        class="text-center max-w-6xl mx-10"
+      >
         <p class="my-3 text-sm tracking-widest text-indigo-500 uppercase">
           Teslavolts
         </p>
         <h1 class="my-3 text-3xl font-bold tracking-tight text-gray-800 md:text-5xl ">
-          eMobility creates lasting connections
+        eMobility creates lasting connections
         </h1>
         <div>
-          <p class="max-w-6xl mx-auto my-2 text-base text-gray-500 md:leading-relaxed md:text-xl ">
+        <p class="max-w-6xl mx-auto my-2 text-base text-gray-500 md:leading-relaxed md:text-xl ">
             A renowned automaker was searching for a business partner with
             knowledge of the EV charging services industry. Our EV charging
             management solution allowed them to concentrate on selling electric
@@ -39,7 +58,7 @@ export default function Section4() {
             Seach Examples
           </a> */}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

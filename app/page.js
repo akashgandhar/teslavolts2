@@ -186,7 +186,7 @@ export default function Home() {
               <span class=""> Electric Mobility Solutions</span>
             </div>
             <div class="reveal-up mt-10 max-w-[600px] p-2 text-center text-xl max-lg:max-w-full text-[#ddd]">
-              Harness TeslaVolts' powerful platform to effortlessly scale across
+              Harness TeslaVolts&apos; powerful platform to effortlessly scale across
               markets, address any use case, and develop your unique offerings,
               all while maintaining full control over your business operations.
             </div>

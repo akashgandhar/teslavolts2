@@ -57,7 +57,7 @@ export default function Section2() {
         variants={slideIn("right", "spring", 0.2, 2)}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
-        src="/solutions/point.png"
+        src="/new/s11.jpg"
         alt="Leafs"
         class="w-full h-48 object-cover sm:h-screen sm:w-4/12 p-20"
       />

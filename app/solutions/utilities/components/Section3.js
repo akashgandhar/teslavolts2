@@ -70,7 +70,7 @@ export default function Section3() {
                 variants={slideIn("right", "spring", 0.2, 2)}
                 initial="hidden"
                 animate={isInView ? "show" : "hidden"}
-                src="/solutions/cart.png"
+                src="/new/s22.jpg"
                 className="mix-blend-multiply"
               />
             </div>

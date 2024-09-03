@@ -1,20 +1,37 @@
-import React from "react";
+import { useInView, motion } from "framer-motion";
+import React, { useRef } from "react";
+import { slideIn } from "../../../../utils/motion";
 
 export default function Section4() {
+  const divRef = useRef(null);
+
+  const isInView = useInView(divRef, {
+    triggerOnce: true,
+  });
+
   return (
-    <div class="flex min-h-[70vh] py-10 justify-center items-center ">
-      <div class="text-center max-w-6xl mx-10">
+    <div
+      ref={divRef}
+      class="flex  min-h-[70vh] py-10 justify-center items-center overflow-hidden"
+    >
+      <motion.div
+        variants={slideIn("down", "spring", 0.2, 2)}
+        initial="hidden"
+        animate={isInView ? "show" : "hidden"}
+        class="text-center max-w-6xl mx-10"
+      >
         <p class="my-3 text-sm tracking-widest text-indigo-500 uppercase">
           Teslavolts
         </p>
         <h1 class="my-3 text-3xl font-bold tracking-tight text-gray-800 md:text-5xl ">
-        Understanding your unique requirements
+          Understanding your unique requirements
         </h1>
         <div>
-          <p class="max-w-6xl mx-auto my-2 text-base text-gray-500 md:leading-relaxed md:text-xl ">
-          Every client has a unique set of specifications for their EV charging business.
-As a TeslaVolts customer, you benefit from our guidance throughout the entire process, from assessing your needs and making appropriate plans to selecting the best solution for your company and guaranteeing a seamless integration of the solution.
-          </p>
+          Every client has a unique set of specifications for their EV charging
+          business. As a TeslaVolts customer, you benefit from our guidance
+          throughout the entire process, from assessing your needs and making
+          appropriate plans to selecting the best solution for your company and
+          guaranteeing a seamless integration of the solution.
         </div>
         <div class="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row">
           <a
@@ -30,7 +47,7 @@ As a TeslaVolts customer, you benefit from our guidance throughout the entire pr
             Seach Examples
           </a> */}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function Section1() {
     <motion.div
       //   variants={fadeIn("down", "spring", .2 , 0.75)}
 
-      class="flex bg-[url('/solutions/op1.png')] flex-1 w-full flex-col items-center justify-center text-center px-4 py-28  "
+      class="flex bg-[url('/solutions/op1.png')] flex-1 min-h-screen w-full flex-col items-center justify-center text-center px-4 py-28  "
     >
       <motion.a
         // variants={fadeIn("down", "spring", 0, 1)}
