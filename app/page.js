@@ -160,7 +160,7 @@ export default function Home() {
         stagger: 0.2,
       });
     });
-  }, []);
+  }, [typeof window]);
   return (
     <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black ">
       <section
