@@ -46,9 +46,13 @@ export default function Home() {
           document.removeEventListener("click", onHeaderClickOutside);
         }
       };
-    }
+    }}, [typeof window]);
     // Empty dependency array ensures this effect runs only once after mount
 
+
+    if (typeof window !== "undefined") {
+      // browser code
+    
     let headerWhiteBg = false;
 
     const collapseBtn = document.getElementById("collapse-btn");
@@ -160,7 +164,8 @@ export default function Home() {
         stagger: 0.2,
       });
     });
-  }, [typeof window]);
+  
+  }
   return (
     <div class="flex min-h-[100vh] flex-col bg-slate-50 text-black ">
       <section
